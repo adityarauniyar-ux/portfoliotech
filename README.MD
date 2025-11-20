@@ -103,13 +103,15 @@ Check it out live at: [https://adityarauniyar-tech.vercel.app/](https://adityara
 ```
 
 ---
-Note: When you download this project as a ZIP file, you will not see the backend folder (which contains server.js, .env, and package.json).
+**Note:** When you download this project as a ZIP file, you will not see the backend folder (which contains server.js, .env, and package.json).
 If you want the backend code, download my other repository called portfoliotech-backend.
 
 That repository does not include the .env file, so you must create it yourself.
 Your .env file should contain:
 RESEND_API_KEY=your_resend_api_key
+
 EMAIL_TO=your_email@example.com
+
 PORT=5000
 
 Generate your own Resend API key and replace the placeholder above.
