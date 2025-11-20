@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {User, Mail,  } from 'lucide-react';
+import { User, Mail } from 'lucide-react';
 import { LuMessageSquareShare } from "react-icons/lu";
 import { FaRegCommentDots } from 'react-icons/fa';
 
@@ -20,29 +20,35 @@ export function ContactForm() {
     });
   };
 
+  // ✅ UPDATED SUBMIT HANDLER (Backend API)
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     setStatus('submitting');
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://formspree.io/f/mvggvyar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/contact`,
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  }
+);
+
+
+      const data = await response.json();
 
       if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        const errorData = await response.json();
-        setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
-        setStatus('error');
+        setErrorMessage(data.error || "Something went wrong. Please try again.");
+        setStatus("error");
       }
     } catch (error) {
-      setErrorMessage('An unexpected error occurred. Please try again.');
-      setStatus('error');
+      setErrorMessage("Server error. Please try again.");
+      setStatus("error");
     }
   };
 
