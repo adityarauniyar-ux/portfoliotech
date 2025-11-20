@@ -105,18 +105,51 @@ Check it out live at: [https://adityarauniyar-tech.vercel.app/](https://adityara
 ## 📌 Note
 
 When you download this project as a ZIP file, you **will not see the backend folder** (which contains `server.js`, `.env`, and `package.json`).  
+To get the backend code, download the **portfoliotech-backend** repository. 
+That repository **does not include the `.env` file**, so you must create it yourself.
 
-To get the backend code, download the **portfoliotech-backend** repository. That repository **does not include the `.env` file**, so you must create it yourself.
-
-Your `.env` file should contain:
-
+Your `.env`file (inside the backend folder) should contain:
 ```env
 RESEND_API_KEY=your_resend_api_key
 EMAIL_TO=your_email@example.com
 PORT=5000
 ```
+Replace `your_api_key_here` with your own Resend API key
+and replace `your_email_here` with the email where messages should be delivered.
 
-
+After that: Place the backend folder inside the root folder of this project.
+Inside your root folder, create a `.env.local` file with:
+```
+VITE_API_URL=http://localhost:5000
+```
+**📁 Folder Setup**
+Your project structure should look like this:
+```
+portfoliotech-main/
+│
+├── backend/            ← place backend folder here
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── src/
+├── public/
+├── .env.local
+└── other frontend files...
+```
+**🖥️Step 1 — Start the Backend**
+Open a new terminal, then run:
+```
+cd backend
+npm install
+node server.js
+```
+**🖥️ Step 2 — Start the Frontend**
+Open another terminal (keep backend running), then run:
+```
+npm install
+npm run dev
+```
 ## 🛠 Technologies Used
 
 - **React**: JavaScript library for building the user interface.
