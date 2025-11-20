@@ -102,39 +102,19 @@ Check it out live at: [https://adityarauniyar-tech.vercel.app/](https://adityara
             └── useTheme.ts
 ```
 
----
-**Note:** When you download this project as a ZIP file, you will not see the backend folder (which contains server.js, .env, and package.json).
-If you want the backend code, download my other repository called portfoliotech-backend.
+## 📌 Note
 
-That repository does not include the .env file, so you must create it yourself.
-Your .env file should contain:
+When you download this project as a ZIP file, you **will not see the backend folder** (which contains `server.js`, `.env`, and `package.json`).  
+
+To get the backend code, download the **portfoliotech-backend** repository. That repository **does not include the `.env` file**, so you must create it yourself.
+
+Your `.env` file should contain:
+
+```env
 RESEND_API_KEY=your_resend_api_key
-
 EMAIL_TO=your_email@example.com
-
 PORT=5000
 
-Generate your own Resend API key and replace the placeholder above.
-
-After that:
-
-Place the backend folder inside the root folder of this project.
-
-In the root folder of the frontend project, create a file named .env.local with the following content:
-VITE_API_URL=http://localhost:5000
-
-This will allow the frontend to communicate with your local backend.
-
-Step 1 — Start the Backend
-Open a new terminal, then run:
-cd backend
-npm install
-node server.js
-
-Step 2 — Start the Frontend
-Open another terminal (keep backend running), then run:
-npm install
-npm run dev
 
 ## 🛠 Technologies Used
 
