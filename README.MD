@@ -117,8 +117,8 @@ PORT=5000
 Replace `your_api_key_here` with your own Resend API key
 and replace `your_email_here` with the email where messages should be delivered.
 
-After that: Place the backend folder inside the root folder of this project.
-Inside your root folder, create a `.env.local` file with:
+**After that:** Place the backend folder inside the root folder of this project.
+Inside your root folder, create a `.env.local` file should contain:
 ```
 VITE_API_URL=http://localhost:5000
 ```
