@@ -105,7 +105,7 @@ Check it out live at: [https://adityarauniyar-tech.vercel.app/](https://adityara
 ## 📌 Note
 
 When you download this project as a ZIP file, you **will not see the backend folder** (which contains `server.js`, `.env`, and `package.json`).  
-To get the backend code, download the **portfoliotech-backend** repository. 
+To get the backend code, download the **portfoliotech-backend** repository [https://github.com/adityarauniyar-ux/portfoliotech-backend](https://github.com/adityarauniyar-ux/portfoliotech-backend). 
 That repository **does not include the `.env` file**, so you must create it yourself.
 
 Your `.env`file (inside the backend folder) should contain:
