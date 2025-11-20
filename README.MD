@@ -114,6 +114,7 @@ Your `.env` file should contain:
 RESEND_API_KEY=your_resend_api_key
 EMAIL_TO=your_email@example.com
 PORT=5000
+```
 
 
 ## 🛠 Technologies Used
